@@ -9,7 +9,7 @@ a) Cada grupo deve ter o seu repositorio.
 b) O nome do repositorio no Bitbucket segue o seguinte padrao: ARQCP1819tttGxx
 - ttt deve ser substituido pelo nome da turma. Ex: 2DA
 - xx deve ser substituido pelo número do grupo (sempre com 2 digitos). Ex: G01
-- Exemplo: ARQCP17182DAG01
+- Exemplo: ARQCP18192DAG01
 
 c) Estrutura de diretorios na raiz do repositorio.
 

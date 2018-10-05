@@ -1,8 +1,8 @@
 ex08: main.o
-	gcc main.o -o main
+	gcc -g main.o -o main
 main.o: main.c
-	gcc -c main.c -o main.o
+	gcc -g -c main.c -o main.o
 run:
 	./main
 clean:
-	rm -r -f main.o
+	rm -r -f main main.o 

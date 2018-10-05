@@ -13,6 +13,9 @@ int main(void) {
   int vec[n];
   fill_vec(vec, 10);
 
+  printf("---x---\n");
+
+  printf("Vetor preenchido:\n");
   for(i=0; i<n; i++) {
     printf("%d\n", *(vec+i));
   }

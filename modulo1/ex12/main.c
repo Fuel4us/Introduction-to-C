@@ -8,8 +8,9 @@ int main(void) {
   char str[10] ="ababababab";
   int vec[strlen(str)];
 
-  int length= fillVec(str, c, vec);
+  int length = fillVec(str, c, vec); // saves the amount of length needed
 
+  /* Easy function to print a vector */
   for (int i=0; i<length; i++) {
     printf("%d\n", vec[i]);
   }

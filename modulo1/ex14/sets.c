@@ -8,11 +8,10 @@ int increment(int *vec, int size) {
   int number = 0;
 
   for (int i = 0; i<size; i++) {
-    number = condition(vec, size, i);
+    number = condition(vec, size, i); // for each i it will check the condition
     if (number == 1) {
-      sets++;
+      sets++; // if it's found it increments
     }
   }
-  printf("Sets = %d\n", sets);
   return sets;
 }

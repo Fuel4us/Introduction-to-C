@@ -6,7 +6,7 @@ int condition(int *vec, int size, int start) {
 
   int ret = 0;
 
-  if(size - start >= 3) {
+  if(size - start >= 3) { // to check if there are 3 numbers to check
     for (int i = start; i<start+2; i++) {
       if (vec[i] < vec[i+1] && vec[i+1] < vec[i+2]) {
         ret = 1;

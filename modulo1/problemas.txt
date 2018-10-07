@@ -1,0 +1,4 @@
+Problemas:
+
+Exercício 16 -> Será que é para por num vetor e printar o vetor? Sei que não dá
+                para printar aquilo que é esperado pois Long Long não é capaz. 

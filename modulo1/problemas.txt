@@ -1,4 +1,10 @@
 Problemas:
 
 Exercício 16 -> Será que é para por num vetor e printar o vetor? Sei que não dá
-                para printar aquilo que é esperado pois Long Long não é capaz. 
+                para printar aquilo que é esperado pois Long Long não é capaz.
+
+exercicio 19 e 20-> erro ao retornar null em ambos os casos ent retornei 0
+
+exercicio 05 -> a função pow não funcionava , criei o meu proprio metodo de potencia 
+
+exercicio 07-> baseado na resolução de um forum , percebi como funcionava mas não percebi como podia confirmar se os resultados estavam certos 

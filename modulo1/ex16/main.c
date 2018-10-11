@@ -5,10 +5,8 @@ int main(void) {
 
   int a = 1000000;
   int b = 1000000;
-  long long c = a * b;
+  long long int c = (long long)a * (long long)b;
 
-  printf("C gets us %lld\n", c);
+  printf("%d*%d=%lld\n", a,b,c);
 
-  // It's expected to give us C = 1000000000000. But it gives us -727379968
-  //
 }

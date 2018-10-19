@@ -23,6 +23,8 @@ operation:
   addl %ebx, %ecx
   subl %ecx, %eax
 
+  movl %eax, res
+
   # epilogue
   movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
   popl %ebp # restore the previous stack frame pointer

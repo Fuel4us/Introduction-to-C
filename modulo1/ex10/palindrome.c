@@ -25,7 +25,7 @@ int palindrome(char *str) {
   deblank(str); // removes spaces
 
   int x = 0; // starting point
-  int k = strlen(str) - 1; // length minus 1 space
+  int k = strlen(str); // length minus 1 space
 
   while (k > x) {
     if (toupper(str[x++]) != toupper(str[k--])) { // if it doesnt match up returns 0 which means its not a palindrome

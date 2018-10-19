@@ -8,6 +8,6 @@ void capitalizer(char *vec)
         }
                     i=i+1;
 
-       
+
     }while(vec[i]!='\0');
 }

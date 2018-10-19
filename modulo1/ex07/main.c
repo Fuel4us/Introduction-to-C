@@ -11,5 +11,12 @@ int main()
     else
 	printf("is big endian\n");
 
+  int g = 1;
+  char f = 'c';
+
+  char *bla = &g;
+
+  printf("%p\n", bla);
+
     return 0;
 }

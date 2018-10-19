@@ -1,4 +1,5 @@
-#include "print_even.c"
+#include <stdio.h>
+#include "print_even.h"
 
 int main()
 {

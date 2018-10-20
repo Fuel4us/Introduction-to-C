@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "asm.h"
 
-long op1 = 100;
-long op2 = 150;
+int op1 = 2147843646;
+int op2 = 1;
 
 int main(void) {
 

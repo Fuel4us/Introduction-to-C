@@ -21,6 +21,15 @@ int main(void) {
 
   printf("Operation = %d\n", res);
 
+
+printf("Valor op1:");
+scanf("%d",&op1);
+printf("Valor op2:");
+scanf("%d",&op2);
+res=sum();
+printf("sum = %d:0x%x\n", res,res);
+
+
   return 0;
 
 }

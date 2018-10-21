@@ -1,3 +1,6 @@
 ex 15:
   - power2 e power3 ? mas so a potencia do primeiro numero ou so do segundo? potencia da soma?
   - fiz para a soma dos 2.
+
+ex8 :
+  - guardar um numero numa variavel de tipo char

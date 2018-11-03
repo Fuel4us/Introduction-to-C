@@ -1,2 +1,6 @@
 ex04: não passa nos unit tests porque nao reconhece variaveis globais??
       e outras vezes dava me floating point exception.
+
+ex08: nao passa na segunda parte dos testes
+
+ex10:

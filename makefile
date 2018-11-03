@@ -1,9 +1,9 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES = struct.h
-SOURCES = swap.c main.c blableh.s
-OBJFILES = swap.o main.o
+INCLUDES = encrypt.h
+SOURCES = main.c encrypt.s
+OBJFILES = encrypt.o main.o
 EXEC = exec
 
 # regras de sufixo
@@ -13,11 +13,10 @@ EXEC = exec
 # como transformar um .c num .o ; $< -- nome do ficheiro
 .c.o:
 	gcc -Wall -g -c main.c
-	gcc -Wall -g -c swap.c
 
 # como transformar um .s num .o ; $< -- nome do ficheiro
 .s.o:
-	gcc -Wall -g -c blableh.s
+	gcc -Wall -g -c encrypt.s
 
 ${EXEC}: ${OBJFILES}
 	gcc -Wall -g -o ${EXEC} ${OBJFILES}

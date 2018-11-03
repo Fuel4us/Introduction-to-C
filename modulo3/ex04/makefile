@@ -1,9 +1,9 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES = asm.h
-SOURCES = main.c asm.s
-OBJFILES = main.o asm.o
+INCLUDES = vec_sum.h vec_avg.h
+SOURCES = main.c vec_sum.s vec_avg.s
+OBJFILES = main.o vec_sum.o vec_avg.o
 EXEC = exec
 
 # regras de sufixo
@@ -16,7 +16,8 @@ EXEC = exec
 
 # como transformar um .s num .o ; $< -- nome do ficheiro
 .s.o:
-	gcc -ansi -Wall -g -c asm.s
+	gcc -ansi -Wall -g -c vec_sum.s
+	gcc -ansi -Wall -g -c vec_avg.s
 
 ${EXEC}: ${OBJFILES}
 	gcc -ansi -Wall -g -o ${EXEC} ${OBJFILES}

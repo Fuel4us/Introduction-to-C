@@ -1,0 +1,2 @@
+ex04: não passa nos unit tests porque nao reconhece variaveis globais??
+      e outras vezes dava me floating point exception.

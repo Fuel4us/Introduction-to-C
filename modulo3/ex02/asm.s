@@ -43,12 +43,6 @@ str_copy_p:
     jmp loop_start
 
 end:
-  movb (%esi), %cl # copies the end of the string of string1 to string2 (avoid segmentation fault)
-  movb %cl, (%edi)
-
-  popl %edi
-  popl %esi
-
   # epilogue
   movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
   popl %ebp # restore the previous stack frame pointer

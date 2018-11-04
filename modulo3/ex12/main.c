@@ -5,11 +5,11 @@ short int *ptrvec, num=7;
 
 int main() {
   short int res=0;
-  short int vec[7] = {1002,7,1000,7,1001,7,1005};
+  short int vec[7] = {132,109,104,14,100,22,99};
   ptrvec = vec;
 
   res = vec_zero();
 
-  printf("Numero de elementos alterados = %d\n", res);
+  printf("Elements changed = %d\n", res);
   return 0;
 }

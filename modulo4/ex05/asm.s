@@ -1,21 +1,22 @@
 .section .data
 
 .section .text
-  .global cube
+	.global dec_square
 
-  cube:
+	dec_square:
   # prologue
   pushl %ebp # save previous stack frame pointer
   movl %esp, %ebp # the stack frame pointer for sum function
 
-  movl 8(%ebp), %esi
-  imull %esi
-  imull %esi
+	movl 8(%ebp) , %ecx
+	movl 12(%ebp) , %eax
 
+	subl $1, (%ecx)
 
-  end:
+	movl %eax, %ecx
+	imul %ecx
+
   # epilogue
   movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
   popl %ebp # restore the previous stack frame pointer
-
-  ret
+	ret

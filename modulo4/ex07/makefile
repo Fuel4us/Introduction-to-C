@@ -1,9 +1,9 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES = smallest.h
-SOURCES = main.c smallest.s
-OBJFILES = smallest.o main.o
+INCLUDES = count_odd.h
+SOURCES = main.c count_odd.s
+OBJFILES = count_odd.o main.o
 EXEC = exec
 
 # regras de sufixo
@@ -16,7 +16,7 @@ EXEC = exec
 
 # como transformar um .s num .o ; $< -- nome do ficheiro
 .s.o:
-	gcc -Wall -g -c smallest.s
+	gcc -Wall -g -c count_odd.s
 
 ${EXEC}: ${OBJFILES}
 	gcc -Wall -g -o ${EXEC} ${OBJFILES}

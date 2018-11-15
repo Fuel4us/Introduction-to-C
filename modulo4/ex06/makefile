@@ -28,5 +28,3 @@ run: ${EXEC}
 
 clean:
 	rm -f ${OBJFILES} ${EXEC}
-
-

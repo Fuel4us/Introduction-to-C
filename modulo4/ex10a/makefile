@@ -1,22 +1,17 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES = asm.h
-SOURCES = main.c asm.s
-OBJFILES = main.o asm.o
+INCLUDES = count.h
+SOURCES = main.c count.c
+OBJFILES = main.o count.o
 EXEC = exec
 
 # regras de sufixo
 .SUFFIXES : .c .o
-.SUFFIXES : .s .o
 
 # como transformar um .c num .o ; $< -- nome do ficheiro
 .c.o:
-	gcc -ansi -Wall -g -c main.c
-
-# como transformar um .s num .o ; $< -- nome do ficheiro
-.s.o:
-	gcc -ansi -Wall -g -c asm.s
+	gcc -ansi -Wall -g -c main.c count.c
 
 ${EXEC}: ${OBJFILES}
 	gcc -ansi -Wall -g -o ${EXEC} ${OBJFILES}
@@ -28,5 +23,3 @@ run: ${EXEC}
 
 clean:
 	rm -f ${OBJFILES} ${EXEC}
-
-

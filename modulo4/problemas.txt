@@ -1,0 +1,2 @@
+ex09: nao passa num teste 3,1,-4
+ex13: não sei resolver.

@@ -1,2 +1,4 @@
 ex09: nao passa num teste 3,1,-4
 ex13: não sei resolver.
+
+ex 18.a e 18.b não passa no ultimo teste

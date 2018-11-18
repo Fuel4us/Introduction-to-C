@@ -1,40 +1,66 @@
 .section .data
 
 .section .text
-	.global calc
+	.global greater_date
 
-	calc:
-  # prologue
-  pushl %ebp # save previous stack frame pointer
-  movl %esp, %ebp # the stack frame pointer for sum function
+	greater_date:
+		# prologue
+		pushl %ebp # save previous stack frame pointer
+		movl %esp, %ebp # the stack frame pointer for sum function
 
-  movl 8(%ebp), %edx
-  movl 12(%ebp), %ecx
-	movl 16(%ebp), %eax
+		subl $8 , %esp
+		pushl %ebx
 
-	movl (%ecx),%edi
+		movl 8(%ebp) , %eax
+		movl 12(%ebp) , %edx
 
-  subl %edi, %edx
+		movl %eax, -4(%ebp)
+		movl %edx, -8(%ebp)
 
-  movl %eax, %esi # save register
+		jmp year
 
-  imull %eax, %edx
-  subl $-2, %edx
+	year:
+		movl $0x0000FFFF , %ecx
+		and %ecx , -4(%ebp)
+		and %ecx , -8(%ebp)
+		movl -4(%ebp), %ebx
+		cmpl %ebx , -8(%ebp)
+		jg second
+		jl end
+		je month
 
-  movl $0, %eax
-  movl %edx, %eax
+	month:
+		movl $0xFF000000 , %ecx
+		movl %eax, -4(%ebp)
+		movl %edx , -8(%ebp)
+		and %ecx , -4(%ebp)
+		and %ecx , -8(%ebp)
+		movl -4(%ebp), %ebx
+		cmpl %ebx , -8(%ebp)
+		ja second
+		jb end
+		jnb day
 
-	popl %edi
+	day:
+		movl $0x00FF0000 , %ecx
+		movl %eax, -4(%ebp)
+		movl %edx , -8(%ebp)
+		and %ecx , -4(%ebp)
+		and %ecx , -8(%ebp)
+		movl -4(%ebp), %ebx
+		cmpl %ebx , -8(%ebp)
+		jg second
+		jl end
+		movl $0, %eax
+		jmp end
 
-  # cmpl $0, %esi
-  # jl negate
-  # jmp end
+	second:
+		movl %edx, %eax
+		jmp end
 
-  # negate:
-  # neg %eax
-
-  end:
-  # epilogue
-  movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
-  popl %ebp # restore the previous stack frame pointer
-	ret
+	end:
+		popl %ebx
+		# epilogue
+	  movl %ebp, %esp # restore the previous stack pointer ("clear" the stack)
+	  popl %ebp # restore the previous stack frame pointer
+		ret
